@@ -1,0 +1,72 @@
+/***********/
+/* General */
+/***********/
+body {font-family: "Helvetica Neue";}
+.container {margin-right:0!important; margin-left:0!important; padding-right:0!important;
+        padding-left:0!important; max-width: 100%!important;}
+
+
+/***********/
+/* Header */
+/*********/
+.btn-tweet {background: #1DA1F2; margin: auto; outline: none; color: #FFFFFF;}
+.header {padding: 20px; display: flex; flex-direction: row;}
+.trigger {text-align: center;}
+
+/* Tweet on Desktop */
+.trigger input {border-top-style: hidden; border-right-style: hidden; border-left-style: hidden; border-bottom-style: hidden;
+width: 20%; border-radius: 10px; padding: 5px;}
+
+/* Tweet on Mobile */
+@media screen and (max-width: 1080px)
+{
+  .trigger input {width: 60%;}
+}
+
+/*********/
+/* Form */
+/*******/
+.form {padding: 20px; text-align: end;}
+
+/* Avatar on Desktop */
+.avatar {width: 15%; border-radius: 50%; margin: auto;}
+
+/* Avatar on Mobile */
+@media screen and (max-width: 1080px)
+{
+  .avatar{width: 50%;}
+}
+
+.form-custom {border-top-style: hidden; border-right-style: hidden; border-left-style: hidden; border-bottom-style: hidden;
+width: 100%;}
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/************/
+/* Results */
+/**********/
+
+/* Recos */
+.recos {text-align: center; padding: 20px; display: flex; flex-direction: row;}
+.recos span {color: #1DA1F2; font-weight: bold;}
+
+/* Score */
+.results {position: fixed; bottom: 0px; padding: 20px 0px 0px 0px;}
+
+/* Score on Desktop */
+.score {background-color: black; color: black; padding: 20px 0px 20px 0px; display: flex; flex-direction: row; text-align: center;}
+.score-card {padding: 10px;}
+.hate {background: #DC3545; border-radius: 10px; margin: auto;}
+.neither {background: #198754; border-radius: 10px; margin: auto;}
+.agressive {background: #FFC107; border-radius: 10px; margin:auto;}
+
+/* Score on Mobile */
+@media screen and (max-width: 1080px)
+{
+  .score {flex-direction: column;}
+  .score-card {padding: 10px; width: 60%;}
+  .hate {margin: 0px auto 20px auto;}
+  .neither {margin: 20px auto 20px auto;}
+  .agressive {margin: 20px auto 0px auto;}
+}

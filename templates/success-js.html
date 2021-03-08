@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<!-- Set-up -->
+<head>
+  <title>Twitter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"> -->
+  <link rel="stylesheet" href="../static/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="../static/jquery.highlight-within-textarea.css" rel="stylesheet">
+  <script src="../static/jquery.highlight-within-textarea.js"></script>
+</head>
+
+<!-- UI -->
+<body class="container">
+
+<!-- Header -->
+<div class="flex-container header justify-content-between">
+<!-- Close -->
+  <div class="col-6">
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+<!-- Tweet -->
+  <div class="col-6 trigger">
+    <input class="btn-tweet" type="submit" value="Tweeter" form="tweet_text"/>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="container form justify-content-center align-middle row">
+<!-- Avatar -->
+  <div class="col-4">
+    <!-- <img class="avatar" src="{{ url_for('static',filename='img/avatar.png') }}" alt=""> -->
+    <img class="avatar" src="../static/img/avatar2.webp" alt="">
+  </div>
+<!-- Input -->
+  <div class="col-8 my-auto">
+    <form name="tweet_text" id="tweet_text" action="/success" method="post">
+      <textarea form="tweet_text" rows="4" cols="80" type="text" name="inputTweet" id="inputTweet" class="form-custom">{{tweet}}</textarea>
+    </form>
+  </div>
+</div>
+
+<div class="container results">
+<!-- Reco -->
+  <div class="flex-container recos">
+    <div class="col-4">
+      <span id="{{recos[0]}}" onclick="replace(this.id)">{{recos[0]}}</span>
+    </div>
+    <div class="col-4">
+      <span id="{{recos[1]}}" onclick="replace(this.id)">{{recos[1]}}</span>
+    </div>
+    <div class="col-4">
+      <span id="{{recos[2]}}" onclick="replace(this.id)">{{recos[2]}}</span>
+    </div>
+  </div>
+
+<!-- Score -->
+  <div class="flex-container score">
+  <!-- hate -->
+      <span class="score-card hate">Hateful: {{score[0]}}</span>
+  <!-- neither -->
+      <span class="score-card neither">Neither: {{score[2]}}</span>
+  <!-- agressive -->
+      <span class="score-card agressive">Offensive: {{score[1]}}</span>
+  </div>
+</div>
+
+<!-- End of Body -->
+<script charset="utf-8">
+  var data = "{{data|safe}}";
+  var word = "{{word|safe}}";
+  var output = "{{output|safe}}";
+  $('#inputTweet').highlightWithinTextarea({
+    highlight: word // string, regexp, array, function, or custom object
+  });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+function replace(clicked_id) {
+  var word = "{{word|safe}}";
+  var new_word = clicked_id;
+  var hl_tweet = document.getElementById("inputTweet").value;
+  var newTweet = hl_tweet.replace(word, new_word);
+  document.getElementById("inputTweet").innerText = newTweet;
+  $('#inputTweet').highlightWithinTextarea('destroy');
+};
+</script>
+</body>
+</html>
