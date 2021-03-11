@@ -1,5 +1,12 @@
 # Hateful Speech Checker
 ![banner](./static/img/back.png)
+---
+Summary:
+1. [_How an NLP assistant is helping to cope with hate speech on social networks_](#how-an-NLP-assistant-is-helping-to-cope-with-hate-speech-on-social-networks)
+2. [App preview](#app-preview)
+3. [Classifier accuracy](#classifier-accuracy)
+4. [Technologies used](#technologies-used)
+---
 ## _How an NLP assistant is helping to cope with hate speech on social networks_
 This project has been run in the context of a final examination for the [__MSc Artificial Intelligence & Business Analytics__](https://www.linkedin.com/groups/12518036/) of __Toulouse Business School__.
 The problematic given was: _"How limiting hateful speech on Twitter?"_.
