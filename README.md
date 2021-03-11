@@ -6,6 +6,11 @@ The problematic given was: _"How limiting hateful speech on Twitter?"_.
 
 We have thought that to limit effectively the diffusion of agressive contents on __Social Network Sites (SNS)__ the platform should present how the content is perceived by the system to the user, highlight the strongest word and suggest recommendations. Doing so, the user is fully aware of the consequence of his content and can choose to conform his speech or publish it as it is. In both case, it produces insightful behavioural information on the SNS's user to classify them.
 
+## App preview
+Consider the model to be integrated into the Tweeter interface. When the user is writing his content our model is classifying the scores and identifying the strongest word in order to offer suggestion to replace it.
+![app_preview](./static/img/preview.png)
+The user will replace the first word __bitch__ by __guy__ and then the __hateful__ score will decrease to be more __agressive__. The model identifies a new word __fuck__. We can iterate as long as the model detects strong content.
+
 ## Classifier accuracy
 One of our challenge was being able __to differentiate neutral, offensive and hateful language__. To do so, we have used a __transformers__ that we have trained with 2 datasets: _Davidson et al., 2017 and Fonta et al., 2018_.
 
