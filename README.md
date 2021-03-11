@@ -8,7 +8,9 @@ We have thought that to limit effectively the diffusion of agressive contents on
 
 ## App preview
 Consider the model to be integrated into the Tweeter interface. When the user is writing his content our model is classifying the scores and identifying the strongest word in order to offer suggestion to replace it.
+
 ![app_preview](./static/img/preview.png)
+
 The user will replace the first word __bitch__ by __guy__ and then the __hateful__ score will decrease to be more __agressive__. The model identifies a new word __fuck__. We can iterate as long as the model detects strong content.
 
 ## Classifier accuracy
