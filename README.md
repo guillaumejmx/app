@@ -12,7 +12,7 @@ One of our challenge was being able __to differentiate neutral, offensive and ha
 We have trained HuggingFace's __DistilBERT__ (Sanh et al., 2019), Facebook's __RoBERTa__ (Liu et al., 2019), and Google's __AlBERT__ (Lan et al., 2019) which results are summarized below:
 Transformer | DistilBERT | RoBERTa | AlBERT
 --- | --- | --- | ---
-# of parameters | 67M | 125M | 12M
+Nbr of parameters | 67M | 125M | 12M
 Hate F1-score | 0.86 | __0.87__ | 0.84
 Offensive F1-score | 0.87 | 0.86 | 0.85
 Neither F1-score | 0.90 | __0.91__ | 0.89
