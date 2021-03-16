@@ -11,7 +11,7 @@ import re
 import sentencepiece
 
 save_directory = './model/classification/AlBERT'
-tokenizer = AlbertTokenizerFast.from_pretrained('albert-base-v2')
+tokenizer = AlbertTokenizerFast.from_pretrained(save_directory)
 model = AlbertForSequenceClassification.from_pretrained(save_directory)
 
 ##################
